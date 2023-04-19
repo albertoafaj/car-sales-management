@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-back": "cd ./backend && nodemon --inspect ./src/server.js"
+    "start-back": "cd ./backend && nodemon --inspect ./src/server.js",
+    "start-front": "cd ./frontend && npm start"
   },
   "author": "",
   "license": "ISC",
