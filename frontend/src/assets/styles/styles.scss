@@ -1,0 +1,9 @@
+@import '_prime-ng';
+
+$background-color: #252525;
+$font-color: #fff;
+
+.p-inputtext {
+  background-color: $background-color;
+  color: $font-color;
+}
