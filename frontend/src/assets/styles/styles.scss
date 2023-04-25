@@ -1,9 +1,30 @@
 @import '_prime-ng';
 
-$background-color: #252525;
-$font-color: #fff;
+$background-color:  #c1cade;
+$font-color: #0b1c40;
+
+body {
+  background-image: url("../images/background-login.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.95;
+}
 
 .p-inputtext {
   background-color: $background-color;
   color: $font-color;
+}
+
+.p-card {
+  background-color: $background-color;
+}
+
+.p-button {
+  width: 100%;
+}
+
+.logo {
+  gap: .5rem;
+  color: rgb(35, 58, 108);
 }
