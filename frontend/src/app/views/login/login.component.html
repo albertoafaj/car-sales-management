@@ -1,0 +1,25 @@
+<section class="grid justify-content-center login">
+  <div class="p-col-10 p-sm:col-6 p-md:col-4">
+    <p-card>
+      <div grid>
+        <div class="col-12">
+          <div class="logo flex justify-content-center">
+            <i class="fa-solid fa-car-side fa-2x flex align-items-center"></i>
+            <h2 class="text-center align-items-center">CAR SALES</h2>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="">Usuário:</label>
+          <input [(ngModel)]="requestLogin.login" class="col-12" type="text" pInputText/>
+        </div>
+        <div class="col-12">
+          <label for="">Senha:</label>
+          <input [(ngModel)]="requestLogin.password" class="col-12" type="password" pInputText/>
+        </div>
+        <div class="col-12">
+          <p-button (onClick)="login()" label="Entrar"></p-button>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</section>
