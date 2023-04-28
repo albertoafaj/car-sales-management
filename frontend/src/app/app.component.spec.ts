@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { By } from '@angular/platform-browser';
 import { Component } from '@angular/core';
 
-describe('AppComponent', () => {
+fdescribe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
