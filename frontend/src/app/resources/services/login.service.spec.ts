@@ -4,7 +4,7 @@ import { LoginService } from './login.service';
 import { RequestLogin } from '../models/RequestLogin';
 import { ResponseLogin } from '../models/ResponseLogin';
 
-fdescribe('LoginService', () => {
+describe('LoginService', () => {
   let service: LoginService;
   let htppTestingController: HttpTestingController;
 

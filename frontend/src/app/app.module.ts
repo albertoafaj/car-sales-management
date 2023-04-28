@@ -7,6 +7,8 @@ import { LoginComponent } from './views/login/login.component';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ButtonModule } from 'primeng/button';
     BrowserAnimationsModule,
     CardModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
