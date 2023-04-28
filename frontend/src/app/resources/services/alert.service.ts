@@ -6,7 +6,7 @@ import Swal, { SweetAlertIcon } from 'sweetalert2';
 })
 export class AlertService {
 
-  constructor(private swal: typeof Swal) { };
+  constructor() { };
 
   public success(message: string, title?: string): void {
     this.showAlert(title, message, 'success');
@@ -21,6 +21,6 @@ export class AlertService {
   }
 
   private showAlert(title: string | undefined, message: string, icon: SweetAlertIcon): void {
-    this.swal.fire(title, message, icon);
+    Swal.fire(title, message, icon);
   }
 };

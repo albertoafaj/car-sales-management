@@ -4,14 +4,13 @@ import Swal from 'sweetalert2';
 
 fdescribe('AlertService', () => {
   let service: AlertService;
-  let swalSpy: jasmine.SpyObj<typeof Swal>;
+  let swalSpy: jasmine.Spy;
 
   beforeEach(() => {
-    swalSpy = jasmine.createSpyObj('Swal', ['fire']);
-    TestBed.configureTestingModule({
-      providers: [{ provide: Swal, useValue: swalSpy }]
-    });
-    service = new AlertService(swalSpy);
+    TestBed.configureTestingModule({});
+    service = TestBed.inject(AlertService);
+    swalSpy = spyOn(Swal, 'fire')
+
   });
 
   it('should be created', () => {
@@ -21,23 +20,21 @@ fdescribe('AlertService', () => {
   describe('success', () => {
     it('should call showAlert with the correct arguments', () => {
       service.success('Test Message', 'Test Title');
-      expect(swalSpy.fire).toHaveBeenCalledWith('Test Title', 'Test Message', 'success');
+      expect(swalSpy).toHaveBeenCalledWith('Test Title', 'Test Message', 'success');
     });
-
-
   });
 
   describe('info', () => {
     it('should call showAlert with the correct arguments', () => {
       service.info('Test Message', 'Test Title');
-      expect(swalSpy.fire).toHaveBeenCalledWith('Test Title', 'Test Message', 'info');
+      expect(swalSpy).toHaveBeenCalledWith('Test Title', 'Test Message', 'info');
     });
   });
 
   describe('error', () => {
     it('should call showAlert with the correct arguments', () => {
       service.error('Test Message', 'Test Title');
-      expect(swalSpy.fire).toHaveBeenCalledWith('Test Title', 'Test Message', 'error');
+      expect(swalSpy).toHaveBeenCalledWith('Test Title', 'Test Message', 'error');
     });
   });
 });
