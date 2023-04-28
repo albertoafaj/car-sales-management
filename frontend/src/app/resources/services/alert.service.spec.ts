@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AlertService } from './alert.service';
 import Swal from 'sweetalert2';
 
-fdescribe('AlertService', () => {
+describe('AlertService', () => {
   let service: AlertService;
   let swalSpy: jasmine.Spy;
 

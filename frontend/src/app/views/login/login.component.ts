@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RequestLogin } from 'src/app/resources/models/RequestLogin';
 import { AlertService } from 'src/app/resources/services/alert.service';
 import { LoginService } from 'src/app/resources/services/login.service';
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private router: Router
   ) {
     this.requestLogin = new RequestLogin();
   }
@@ -25,7 +27,9 @@ export class LoginComponent implements OnInit {
   public login(): void {
     this.loginService.login(this.requestLogin).subscribe(
       (data) => {
+        this.alertService.info('feature not implemented');
         console.log(data);
+        this.router.navigate(['dashboard'])
       },
       (httpError) => {
         this.alertService.error(httpError.error.message);
